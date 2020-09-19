@@ -1,0 +1,1 @@
+export { Desktop as CategoryDesktop, Mobile as CategoryMobile } from './src/category';

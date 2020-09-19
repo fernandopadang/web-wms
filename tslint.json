@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-react", "tslint-react-a11y"],
+  "jsRules": {},
+  "rules": {
+      "jsx-alignment": false,
+      "no-submodule-imports": false,
+      "no-implicit-dependencies": false,
+      "jsx-no-multiline-js": false,
+      "no-unused-expression": false,
+      "jsx-no-lambda": false,
+      "semicolon": [true, "always"],
+      "react-a11y-anchors": false,
+      "react-a11y-event-has-role": false,
+      "react-a11y-tabindex-no-positive": false
+  },
+  "rulesDirectory": []
+}
