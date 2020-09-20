@@ -1,13 +1,13 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-export default function Home() {
+export default function HomePages() {
   return (
     <div>
       <Head>
         <title>Create Web Ads</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>web-next</div>
+      <div>home</div>
     </div>
-  )
+  );
 }
