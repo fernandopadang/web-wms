@@ -1,0 +1,12 @@
+{
+  "name": "@web-next/layouts",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "peerDependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "typescript": "^4.0.2"
+  },
+  "license": "MIT"
+}
