@@ -1,13 +1,16 @@
-import Head from 'next/head';
+import { LayoutMaster } from '@web-next/layouts';
+import dynamic from 'next/dynamic';
+const HomeDesktop = dynamic(() => import('@web-next/views/src/home/dekstop'));
+const HomeMobile = dynamic(() => import('@web-next/views/src/home/mobile'));
+// import { HomeDesktop, HomeMobile } from '@web-next/views';
 
-export default function HomePages() {
-  return (
-    <div>
-      <Head>
-        <title>Create Web Ads</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>home</div>
-    </div>
-  );
+interface DefaultProps { isMobile: boolean; }
+
+export default function HomePages(props: DefaultProps) {
+  const PropsLayout = {
+    isMobile: props.isMobile,
+    desktopView: <HomeDesktop />,
+    mobileView: <HomeMobile />
+  };
+  return <LayoutMaster {...PropsLayout} />;
 }
