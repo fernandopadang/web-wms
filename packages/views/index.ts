@@ -1,3 +1,3 @@
-export { Desktop as CategoryDesktop, Mobile as CategoryMobile } from './src/category';
-export { Desktop as ErrorDesktop, Mobile as ErrorMobile } from './src/error';
-export { Desktop as HomeDesktop, Mobile as HomeMobile } from './src/home';
+export { CategoryView } from './src/category';
+export { ErrorView } from './src/error';
+export { HomeView } from './src/home';
