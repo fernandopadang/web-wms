@@ -24,7 +24,7 @@ export default memo(() => {
       </Menu>
       <div className="profile">
         <Menu theme="dark" mode="inline" defaultSelectedKeys={[router.route]} defaultOpenKeys={[router.route.split('/')[1]]}>
-          <SubMenu key="warehouse" icon={<UserOutlined />} title="Budiman">
+          <SubMenu key="/profile" icon={<UserOutlined />} title="Budiman">
             <Menu.Item key="/"><Link href="/" shallow={true}><a>Logout</a></Link></Menu.Item>
           </SubMenu>
         </Menu>
