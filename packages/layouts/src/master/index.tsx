@@ -10,7 +10,6 @@ interface DefaultProps {
 
 const Page: NextPage<DefaultProps> = (props) => {
   const { isMobile, desktopView, mobileView } = props;
-  const PageMobileView = mobileView || <div>error page mobile</div>;
   const PageDesktopView = desktopView || <div>error page desktop</div>;
 
   return (
@@ -22,7 +21,7 @@ const Page: NextPage<DefaultProps> = (props) => {
         <meta httpEquiv="content-language" content="id-id" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {isMobile ? PageMobileView : PageDesktopView}
+      {PageDesktopView}
     </React.Fragment>
   );
 };

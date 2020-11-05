@@ -15,9 +15,10 @@
     "tslint": "tslint --init"
   },
   "dependencies": {
-    "@web-next/api": "^0",
-    "@web-next/layouts": "^0",
-    "@web-next/views": "^0",
+    "@web-wms/api": "^0",
+    "@web-wms/layouts": "^0",
+    "@web-wms/models": "^0",
+    "@web-wms/views": "^0",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",

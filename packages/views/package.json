@@ -1,5 +1,5 @@
 {
-  "name": "@web-next/views",
+  "name": "@web-wms/views",
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
