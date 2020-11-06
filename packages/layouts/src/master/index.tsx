@@ -9,10 +9,11 @@ interface DefaultProps {
   isMobile: boolean;
   desktopView?: React.ReactNode;
   mobileView?: React.ReactNode;
+  title?: string;
 }
 
 const Page: NextPage<DefaultProps> = (props) => {
-  const { isMobile, desktopView, mobileView } = props;
+  const { isMobile, desktopView, mobileView, title } = props;
   const PageDesktopView = desktopView || <div>error page desktop</div>;
   const { Header, Content } = Layout;
 
@@ -28,7 +29,7 @@ const Page: NextPage<DefaultProps> = (props) => {
       <Layout className="layout">
         <SiderMenu />
         <Layout className="site-layout">
-          <Header className="site-layout-background">WMS System: Option 1</Header>
+          <Header className="site-header"><h1>WMS System : {title}</h1></Header>
           <Content style={{ margin: '0 16px' }}>
             {PageDesktopView}
           </Content>
