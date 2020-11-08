@@ -6,7 +6,8 @@ interface DefaultProps { isMobile: boolean; }
 export default function CategoryPages(props: DefaultProps) {
   const PropsLayout = {
     isMobile: props.isMobile,
-    desktopView: <CategoryView />
+    desktopView: <CategoryView />,
+    title: "Stock Inbound"
   };
   return <LayoutMaster {...PropsLayout} />;
 }

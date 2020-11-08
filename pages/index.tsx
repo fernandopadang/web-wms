@@ -6,7 +6,8 @@ interface DefaultProps { isMobile: boolean; }
 export default function HomePages(props: DefaultProps) {
   const PropsLayout = {
     isMobile: props.isMobile,
-    desktopView: <HomeView />
+    desktopView: <HomeView />,
+    title: "Dashboard"
   };
   return <LayoutMaster {...PropsLayout} />;
 }

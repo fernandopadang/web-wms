@@ -12,8 +12,8 @@ export default memo(() => {
   const router = useRouter();
 
   return (
-    <Sider breakpoint="md" collapsed={collapsed}>
-      <div className="logo" onClick={() => setCollapsed(!collapsed)} />
+    <Sider breakpoint="md" collapsed={collapsed} collapsible={true} onCollapse={() => setCollapsed(!collapsed)}>
+      <div className="logo" />
       <Menu theme="dark" mode="inline" defaultSelectedKeys={[router.route]} defaultOpenKeys={[router.route.split('/')[1]]}>
         <Menu.Item key="/" icon={<PieChartOutlined />}><Link href="/" shallow={true}><a>Dashboard</a></Link></Menu.Item>
         <Menu.Item key="/category" icon={<DesktopOutlined />}><Link href="/category" shallow={true}><a>Category</a></Link></Menu.Item>
@@ -22,13 +22,6 @@ export default memo(() => {
           <Menu.Item key="/warehouse/stock-outbound"><Link href="/warehouse/stock-outbound" shallow={true}><a>Stock Outbound</a></Link></Menu.Item>
         </SubMenu>
       </Menu>
-      <div className="profile">
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={[router.route]} defaultOpenKeys={[router.route.split('/')[1]]}>
-          <SubMenu key="/profile" icon={<UserOutlined />} title="Budiman">
-            <Menu.Item key="/"><Link href="/" shallow={true}><a>Logout</a></Link></Menu.Item>
-          </SubMenu>
-        </Menu>
-      </div>
     </Sider>
   );
 });
