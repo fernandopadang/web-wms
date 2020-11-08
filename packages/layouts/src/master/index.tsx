@@ -20,7 +20,7 @@ const Page: NextPage<DefaultProps> = (props) => {
   return (
     <React.Fragment>
       <Head>
-        <title key="title">Web WMS</title>
+        <title key="title">Web WMS - {title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta name="author" content="Web Next"/>
         <meta httpEquiv="content-language" content="id-id" />
