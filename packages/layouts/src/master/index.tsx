@@ -5,6 +5,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import Header from './components/header';
 import SiderMenu from './components/sider-menu';
+import '../../../../public/scss/app.scss';
 
 interface DefaultProps {
   isMobile: boolean;
