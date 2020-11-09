@@ -1,18 +1,23 @@
-import React, { useState, memo } from 'react';
+import React, { memo } from 'react';
 import { Layout, Menu } from 'antd';
 import { DesktopOutlined, PieChartOutlined, SyncOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import './style.css';
 
-export default memo(() => {
+interface DefaultProps{
+  collapsed: boolean;
+  setCollapsed: (collapsed: boolean) => void;
+}
+
+export default memo((props: DefaultProps) => {
+  const { collapsed, setCollapsed } = props;
   const { Sider } = Layout;
   const { SubMenu } = Menu;
-  const [collapsed, setCollapsed] = useState(false);
   const router = useRouter();
 
   return (
-    <Sider breakpoint="md" collapsed={collapsed} collapsible={true} onCollapse={() => setCollapsed(!collapsed)}>
+    <Sider breakpoint="md" collapsed={collapsed} onCollapse={() => setCollapsed(!collapsed)}>
       <div className="logo" />
       <Menu theme="dark" mode="inline" defaultSelectedKeys={[router.route]} defaultOpenKeys={[router.route.split('/')[1]]}>
         <Menu.Item key="/" icon={<PieChartOutlined />}><Link href="/" shallow={true}><a>Dashboard</a></Link></Menu.Item>
