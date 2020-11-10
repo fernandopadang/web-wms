@@ -7,7 +7,7 @@ export default function CategoryPages(props: DefaultProps) {
   const PropsLayout = {
     isMobile: props.isMobile,
     desktopView: <VendorView />,
-    title: "Stock Inbound"
+    title: "Category"
   };
   return <LayoutMaster {...PropsLayout} />;
 }
