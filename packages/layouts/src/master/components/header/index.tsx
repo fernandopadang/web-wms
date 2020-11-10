@@ -1,4 +1,4 @@
-import { Fragment, memo } from 'react';
+import { Fragment, memo, useState } from 'react';
 import { Layout, Menu, Avatar, Popover, List, Badge } from 'antd';
 import { MenuUnfoldOutlined, MenuFoldOutlined, RightOutlined, BellOutlined } from '@ant-design/icons';
 
@@ -11,26 +11,26 @@ export default memo((props: DefaultProps) => {
   const { collapsed, setCollapsed } = props;
   const { Header } = Layout;
   const { SubMenu } = Menu;
-  const notifications = [
+  const [notifications, setNotifications] = useState<{title?: string, description?: string}[]>([
     {
-      title: "pertama",
-      description: "description pertama"
+      title: "Information 1",
+      description: "Description"
     }
-  ];
+  ]);
   const rightContent = [
     <Menu key="user" mode="horizontal">
       <SubMenu
         title={
           <Fragment>
-            <span style={{ color: '#999', marginRight: 4 }}>Hi,</span>
+            <span className="user-hi">Hi,</span>
             <span>Michael</span>
-            <Avatar style={{ marginLeft: 8, width: "32px" }} src={"https://lh3.googleusercontent.com/ogw/ADGmqu9EtxdU1RQ46zDdB9pCeFwt8i7IpZ8llQxtffS7=s64-c-mo"} />
+            <Avatar className="icon-avatar" src={"https://lh3.googleusercontent.com/ogw/ADGmqu9EtxdU1RQ46zDdB9pCeFwt8i7IpZ8llQxtffS7=s64-c-mo"} />
           </Fragment>
         }
       >
         <Menu.Item key="SignOut">Sign out</Menu.Item>
       </SubMenu>
-    </Menu>,
+    </Menu>
   ];
   rightContent.unshift(
     <Popover
@@ -55,7 +55,7 @@ export default memo((props: DefaultProps) => {
           />
           {notifications.length ? (
             <div
-              onClick={() => notifications.splice(0, 1)}
+              onClick={() => setNotifications([])}
               className="clearButton"
             >
               <span>Clear notifications</span>
