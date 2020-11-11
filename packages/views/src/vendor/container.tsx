@@ -1,12 +1,13 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { Table, Tag, Space, Button, Typography, Breadcrumb } from 'antd';
-import { EditOutlined, DeleteOutlined, HomeOutlined } from '@ant-design/icons';
+import { Table, Tag, Space, Button, Typography, Breadcrumb, Modal, notification } from 'antd';
+import { EditOutlined, DeleteOutlined, HomeOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
 
 export default memo(() => {
   const { Text } = Typography;
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
   const columns = [
     {
       title: 'Name',
@@ -52,8 +53,8 @@ export default memo(() => {
       key: 'action',
       render: (text: any, record: any) => (
         <Space size="middle">
-          <Button type="primary" size="small" icon={<EditOutlined />}>update</Button>
-          <Button type="primary" danger={true} size="small" icon={<DeleteOutlined />}>delete</Button>
+          <Button type="primary" size="small" icon={<EditOutlined />}>Update</Button>
+          <Button type="primary" danger={true} size="small" icon={<DeleteOutlined />} onClick={ModalDelete}>Delete</Button>
         </Space>
       ),
     },
@@ -84,6 +85,23 @@ export default memo(() => {
       },
     );
   }
+  const ModalDelete = () => {
+    Modal.confirm({
+      title: 'Are you sure you want to delete this item?',
+      icon: <ExclamationCircleOutlined />,
+      okText: 'Delete',
+      cancelText: 'Cancel',
+      okType: 'primary',
+      onOk: onDeleteSuccess,
+      visible: showModal
+    });
+  };
+  const onDeleteSuccess = (type: any) => {
+    notification.success({
+      message: 'Deleted data successfully!',
+    });
+    Modal.destroyAll();
+  };
   return(
     <Space direction="vertical" size={16} style={{width: "100%"}}>
       <Breadcrumb>
@@ -93,9 +111,9 @@ export default memo(() => {
         <Breadcrumb.Item>Vendor</Breadcrumb.Item>
       </Breadcrumb>
       <Table
-          columns={columns}
-          pagination={{ position: ["bottomRight"], total: data.length, pageSize: 10, defaultCurrent: 1, responsive: true, hideOnSinglePage: true }}
-          dataSource={data} />
+        columns={columns}
+        pagination={{ position: ["bottomRight"], total: data.length, pageSize: 10, defaultCurrent: 1, responsive: true, hideOnSinglePage: true }}
+        dataSource={data} />
     </Space>
   );
 });
