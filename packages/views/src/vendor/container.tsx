@@ -113,7 +113,8 @@ export default memo(() => {
       <Table
         columns={columns}
         pagination={{ position: ["bottomRight"], total: data.length, pageSize: 10, defaultCurrent: 1, responsive: true, hideOnSinglePage: true }}
-        dataSource={data} />
+        dataSource={data}
+        scroll={{ x: 240 }} />
     </Space>
   );
 });

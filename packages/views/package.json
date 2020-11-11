@@ -10,6 +10,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "react-countup": "^4.3.3"
+    "react-countup": "^4.3.3",
+    "@web-wms/helper": "^0"
   }
 }

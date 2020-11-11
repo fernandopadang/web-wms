@@ -25,7 +25,7 @@ const Page: NextPage<DefaultProps> = (props) => {
       <Head>
         <title key="title">Web WMS - {title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <meta name="author" content="Web Next"/>
+        <meta name="author" content="Web WMS"/>
         <meta httpEquiv="content-language" content="id-id" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

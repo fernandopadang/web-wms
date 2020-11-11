@@ -1,13 +1,27 @@
 import { LayoutMaster } from '@web-wms/layouts';
-import { VendorView } from '@web-wms/views';
+import { VendorView, SeoPage } from '@web-wms/views';
+import { ServiceSSR } from '@web-wms/helper';
 
-interface DefaultProps { isMobile: boolean; }
+const MyApp = (props: any) => {
 
-export default function CategoryPages(props: DefaultProps) {
+  if (props.toSSR) return <SeoPage type="Vendor" />;
+
   const PropsLayout = {
     isMobile: props.isMobile,
     desktopView: <VendorView />,
-    title: "Category"
+    title: "Vendor"
   };
-  return <LayoutMaster {...PropsLayout} />;
-}
+
+  return<LayoutMaster {...PropsLayout} />;
+};
+
+MyApp.getInitialProps = async (props : { query: any, req: any }) => {
+  const { req } = props;
+  const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+  const toSSR = ServiceSSR.checkUserAgent(userAgent);
+  return {
+    toSSR
+  };
+};
+
+export default MyApp;

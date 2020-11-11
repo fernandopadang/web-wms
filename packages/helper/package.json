@@ -1,0 +1,10 @@
+{
+  "name": "@web-wms/helper",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "peerDependencies": {
+    "typescript": "^4.0.2"
+  },
+  "license": "MIT"
+}
