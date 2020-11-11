@@ -28,7 +28,7 @@ export default memo(() => {
     <Row gutter={[16, 16]}>
       {numbers.map((item: {title: string, number: number}, key) => {
         return(
-          <Col xs={6} key={key}>
+          <Col xs={12} md={6} key={key}>
             <Card bordered={false}>
               <div className="card-content">
                 <span className="icon-warp"><UserOutlined style={{color: blue.primary}} /></span>
