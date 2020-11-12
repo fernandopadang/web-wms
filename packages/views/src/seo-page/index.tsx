@@ -26,7 +26,6 @@ const SeoPage = (props: {type?: string}) => {
   ];
   return(
     <div>
-      Web WMS
       <NextSeo
         openGraph={{
           type: 'website',
@@ -38,9 +37,7 @@ const SeoPage = (props: {type?: string}) => {
       />
       <BreadcrumbJsonLd itemListElements={breadcrumbs}/>
       <h1>{title}</h1>
-      <div>
-        {description}
-      </div>
+      <div>Web WMS - Application that helps you control and manage operations in a warehouse</div>
     </div>
   );
 };
