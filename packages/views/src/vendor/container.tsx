@@ -1,8 +1,9 @@
-import { memo, useState } from 'react';
+import { memo, useState, Fragment } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Table, Tag, Space, Button, Typography, Breadcrumb, Modal, notification } from 'antd';
 import { EditOutlined, DeleteOutlined, HomeOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
+import { NextSeo } from 'next-seo';
 
 export default memo(() => {
   const { Text } = Typography;
@@ -103,18 +104,23 @@ export default memo(() => {
     Modal.destroyAll();
   };
   return(
-    <Space direction="vertical" size={16} style={{width: "100%"}}>
-      <Breadcrumb>
-        <Breadcrumb.Item>
-          <Link href="/" shallow={true}><a><HomeOutlined /></a></Link>
-        </Breadcrumb.Item>
-        <Breadcrumb.Item>Vendor</Breadcrumb.Item>
-      </Breadcrumb>
-      <Table
-        columns={columns}
-        pagination={{ position: ["bottomRight"], total: data.length, pageSize: 10, defaultCurrent: 1, responsive: true, hideOnSinglePage: true }}
-        dataSource={data}
-        scroll={{ x: 240 }} />
-    </Space>
+    <Fragment>
+      <NextSeo
+        title="Web WMS - Vendor"
+        description="Web WMS - Application that helps you control and manage operations in a warehouse" />
+      <Space direction="vertical" size={16} style={{width: "100%"}}>
+        <Breadcrumb>
+          <Breadcrumb.Item>
+            <Link href="/" shallow={true}><a><HomeOutlined /></a></Link>
+          </Breadcrumb.Item>
+          <Breadcrumb.Item>Vendor</Breadcrumb.Item>
+        </Breadcrumb>
+        <Table
+          columns={columns}
+          pagination={{ position: ["bottomRight"], total: data.length, pageSize: 10, defaultCurrent: 1, responsive: true, hideOnSinglePage: true }}
+          dataSource={data}
+          scroll={{ x: 240 }} />
+      </Space>
+    </Fragment>
   );
 });

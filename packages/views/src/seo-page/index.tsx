@@ -11,7 +11,7 @@ const SeoPage = (props: {type?: string}) => {
   const title =  pageTitle;
   let breadcrumbs;
   let mainImage;
-  mainImage = "../../../../public/icon-finder.png";
+  mainImage = "https://i.ibb.co/5rdvW9F/iconfinder-technologymachineelectronicdevice24-4026436-113326.png";
   breadcrumbs =  [
     {
       position: 1,
@@ -37,6 +37,10 @@ const SeoPage = (props: {type?: string}) => {
         }}
       />
       <BreadcrumbJsonLd itemListElements={breadcrumbs}/>
+      <h1>{title}</h1>
+      <div>
+        {description}
+      </div>
     </div>
   );
 };
