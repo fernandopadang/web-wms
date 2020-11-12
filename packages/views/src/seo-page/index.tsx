@@ -6,7 +6,7 @@ const SeoPage = (props: {type?: string}) => {
   const router = useRouter();
   const domain = "https://dev-web-wms.vercel.app/";
   const pageTitle = router.asPath !== "/" ? "Web WMS - " + Sanitize(String(router.asPath)) : "Web WMS - Application that helps you control and manage operations in a warehouse";
-  const description = pageTitle;
+  const description = pageTitle + " : Application that helps you control and manage operations in a warehouse";
 
   const title =  pageTitle;
   let breadcrumbs;
@@ -37,7 +37,7 @@ const SeoPage = (props: {type?: string}) => {
       />
       <BreadcrumbJsonLd itemListElements={breadcrumbs}/>
       <h1>{title}</h1>
-      <div>Web WMS - Application that helps you control and manage operations in a warehouse</div>
+      <span>{description}</span>
     </div>
   );
 };

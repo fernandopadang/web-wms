@@ -1,28 +1,27 @@
 import { LayoutMaster } from '@web-wms/layouts';
-import { HomeView } from '@web-wms/views';
-import { NextSeo } from 'next-seo';
-import Style from "../public/icon-finder.png";
+import { HomeView, SeoPage } from '@web-wms/views';
+import { ServiceSSR } from '@web-wms/helper';
 
-interface DefaultProps { isMobile: boolean; }
+const MyApp = (props: any) => {
 
-export default function HomePages(props: DefaultProps) {
-  const OG = () => {
-    return(
-      <NextSeo
-          openGraph={{
-            type: 'website',
-            title: "Web WMS",
-            description: "Web WMS - Application that helps you control and manage operations in a warehouse",
-            images: [{ url: "../public/icon-finder.png", alt: "Logo Web WMS"}
-            ],
-          }}
-        />
-    );
-  };
+  if (props.toSSR) return <SeoPage type="Dashboard" />;
+
   const PropsLayout = {
     isMobile: props.isMobile,
-    desktopView: <><OG /><HomeView /></>,
+    desktopView: <HomeView />,
     title: "Dashboard"
   };
-  return <LayoutMaster {...PropsLayout} />;
-}
+
+  return<LayoutMaster {...PropsLayout} />;
+};
+
+MyApp.getInitialProps = async (props : { query: any, req: any }) => {
+  const { req } = props;
+  const userAgent = req ? req.headers['user-agent'] : navigator.userAgent;
+  const toSSR = ServiceSSR.checkUserAgent(userAgent);
+  return {
+    toSSR
+  };
+};
+
+export default MyApp;
