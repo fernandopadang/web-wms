@@ -1,15 +1,15 @@
 import { LayoutMaster } from '@web-wms/layouts';
-import { HomeView, SeoPage } from '@web-wms/views';
+import { VendorView, SeoPage } from '@web-wms/views';
 import { ServiceSSR } from '@web-wms/helper';
 
 const MyApp = (props: any) => {
 
-  if (props.toSSR) return <SeoPage type="Dashboard" />;
+  if (props.toSSR) return <SeoPage type="Vendor" />;
 
   const PropsLayout = {
     isMobile: props.isMobile,
-    desktopView: <HomeView />,
-    title: "Dashboard"
+    desktopView: <VendorView />,
+    title: "Vendor"
   };
 
   return<LayoutMaster {...PropsLayout} />;

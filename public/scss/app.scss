@@ -1,0 +1,127 @@
+.section-header {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 0;
+  :global {
+    .ant-menu-submenu-title {
+      height: 72px;
+    }
+
+    .ant-menu-horizontal {
+      & > .ant-menu-submenu:hover {
+        color: white;
+        background-color: transparent;
+      }
+    }
+
+    .ant-menu {
+      border-bottom: none;
+      height: 64px;
+    }
+
+    .ant-menu-horizontal > .ant-menu-submenu {
+      top: 0;
+      margin-top: 0;
+    }
+
+    .ant-menu-horizontal > .ant-menu-item,
+    .ant-menu-horizontal > .ant-menu-submenu {
+      border-bottom: none;
+    }
+
+    .ant-menu-horizontal > .ant-menu-item-active,
+    .ant-menu-horizontal > .ant-menu-item-open,
+    .ant-menu-horizontal > .ant-menu-item-selected,
+    .ant-menu-horizontal > .ant-menu-item:hover,
+    .ant-menu-horizontal > .ant-menu-submenu-active,
+    .ant-menu-horizontal > .ant-menu-submenu-open,
+    .ant-menu-horizontal > .ant-menu-submenu-selected,
+    .ant-menu-horizontal > .ant-menu-submenu:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  
+  .user-hi {
+    margin-right: 4px;
+    color: #999;
+  }
+
+  .icon-avatar {
+    margin-left: 8px;
+    width: 32px;
+  }
+}
+
+.iconButton {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  cursor: pointer;
+  background: transparent;
+
+  &:hover {
+    .iconFont {
+      color: #1890ff;
+    }
+  }
+
+  & + .iconButton {
+    margin-left: 8px;
+  }
+
+  .iconFont {
+    color: #b2b0c7;
+    font-size: 24px;
+  }
+}
+
+.notification {
+  padding: 8px 0;
+  width: 320px;
+  .notificationItem {
+    transition: all 0.3s;
+    padding: 12px 24px;
+    cursor: pointer;
+    &:hover {
+      background-color: #e6f7ff;
+    }
+  }
+  .clearButton {
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    &:hover {
+      background-color: #e6f7ff;
+    }
+  }
+}
+
+.notificationPopover {
+  :global {
+    .ant-popover-inner {
+      border-radius: 8px;
+    }
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+    .ant-popover-arrow {
+      display: none;
+    }
+    .ant-list-item-content {
+      flex: 0;
+      margin-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.number-card {
+  padding: 32px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.icon-warp {
+  font-size: 54px;
+  float: left;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 400;
+}

@@ -1,5 +1,5 @@
 export default function Container() {
   return(
-    <div>views category desktop</div>
+    <h2>views Stock Outbound</h2>
   );
 }
