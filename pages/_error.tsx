@@ -8,5 +8,5 @@ export default function ErrorPages(props: DefaultProps) {
     isMobile: props.isMobile,
     desktopView: <ErrorView />
   };
-  return <LayoutMaster {...PropsLayout} />;
+  return <ErrorView  />;
 }

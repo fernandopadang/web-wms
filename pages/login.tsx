@@ -1,18 +1,18 @@
 import { LayoutMaster } from '@web-wms/layouts';
-import { VendorView, SeoPage } from '@web-wms/views';
+import { LoginView, SeoPage } from '@web-wms/views';
 import { ServiceSSR } from '@web-wms/helper';
 
 const MyApp = (props: any) => {
 
-  if (props.toSSR) return <SeoPage type="Vendor" />;
+  if (props.toSSR) return <SeoPage type="LANDING" />;
 
   const PropsLayout = {
     isMobile: props.isMobile,
-    desktopView: <VendorView />,
-    title: "Vendor"
+    desktopView: <LoginView />,
+    title: "Login"
   };
 
-  return<LayoutMaster {...PropsLayout} />;
+  return<LoginView />;
 };
 
 MyApp.getInitialProps = async (props : { query: any, req: any }) => {

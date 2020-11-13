@@ -1,6 +1,7 @@
 const withPlugins = require('next-compose-plugins');
 const withSass = require('@zeit/next-sass');
 const withCss = require('@zeit/next-css');
+const withLess = require('@zeit/next-less');
 const withImages = require('next-images');
 require('dotenv').config();
 
@@ -13,7 +14,15 @@ const defaultConfiguration = {
 };
 
 const config = withPlugins([
-  [withSass], withImages, withCss
+  [withSass], withImages,
+  withLess({
+    lessLoaderOptions: {
+      javascriptEnabled: true,
+    },
+    webpack(config, options) {
+      return config
+    }
+  }),
 ], defaultConfiguration);
 
 module.exports = config;

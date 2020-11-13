@@ -1,12 +1,17 @@
 import React from 'react';
+import { Result, Button } from 'antd';
 import Router from 'next/router';
+import { NextSeo } from 'next-seo';
 
 export default function Container() {
   return(
     <React.Fragment>
-      <h1>Error</h1>
-      <button onClick={() => Router.push("/")}>Home</button>
-      <button onClick={() => Router.push("/category")}>Category</button>
+      <NextSeo title="Michael Fernando Padang - Page Not Found" description="Sorry, the page you visited does not exist." />
+      <Result
+        status="404"
+        title="404"
+        subTitle="Sorry, the page you visited does not exist."
+        extra={<Button onClick={() => Router.push("/landing")} type="primary">Back Home</Button>} />
     </React.Fragment>
   );
 }

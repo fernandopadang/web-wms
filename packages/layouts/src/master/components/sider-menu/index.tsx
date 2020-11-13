@@ -3,7 +3,7 @@ import { Layout, Menu } from 'antd';
 import { ShopOutlined, PieChartOutlined, SyncOutlined, UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import './style.css';
+import './style.less';
 
 interface DefaultProps{
   collapsed: boolean;

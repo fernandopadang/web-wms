@@ -3,7 +3,7 @@ import { Row, Col, Card } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { blue } from '@ant-design/colors';
 import CountUp from 'react-countup';
-import './style.css';
+import './style.less';
 
 export default memo(() => {
   const numbers = [

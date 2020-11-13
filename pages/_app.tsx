@@ -1,5 +1,5 @@
 import MobileDetect from 'mobile-detect';
-import 'antd/dist/antd.css';
+import 'antd/dist/antd.less';
 
 interface PropsMyApp {
   Component: any;
