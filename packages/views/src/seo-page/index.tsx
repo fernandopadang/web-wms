@@ -29,6 +29,8 @@ const SeoPage = (props: {type?: string}) => {
   return(
     <div>
       <NextSeo
+        description={description}
+        title={title}
         openGraph={{
           type: 'website',
           title,
