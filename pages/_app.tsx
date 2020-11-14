@@ -12,23 +12,9 @@ interface PropsInitial {
   ctx: any;
 }
 
-const Seo = () => {
-  return(
-    <DefaultSeo
-      title="Michael Fernando Padang"
-      openGraph={{
-        type: 'website',
-        locale: 'id_ID',
-        url: 'https://www.fernandopadang.tech/',
-        site_name: 'fernandopadang',
-      }}
-    />
-  );
-};
-
 const MyApp = (props: PropsMyApp) => {
   const { Component, pageProps, router} = props;
-  return <><Seo /><Component {...pageProps} /></>;
+  return <Component {...pageProps} />;
 };
 
 MyApp.getInitialProps = async (props: PropsInitial) => {

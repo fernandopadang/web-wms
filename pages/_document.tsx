@@ -22,7 +22,7 @@ function jsonLdWebsite (){
   return (
     <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: website }} />
   );
-};
+}
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
