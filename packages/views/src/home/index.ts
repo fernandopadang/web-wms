@@ -1,2 +1,2 @@
 
-export { default as HomeView} from './container';
+export { default as DashboardView} from './container';
