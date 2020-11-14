@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { NextSeo, BreadcrumbJsonLd } from 'next-seo';
+import { NextSeo, BreadcrumbJsonLd, SocialProfileJsonLd } from 'next-seo';
 import { Sanitize } from '@web-wms/helper';
 
 const SeoPage = (props: {type?: string}) => {
@@ -26,6 +26,22 @@ const SeoPage = (props: {type?: string}) => {
       item: domain + router.asPath,
     }
   ];
+
+  const ProfileJsonLd = () => {
+    return(
+      <SocialProfileJsonLd
+        type="Person"
+        name="Michael Fernando Padang"
+        url="http://www.fernandopadang.tech/landing"
+        sameAs={[
+          'https://id-id.facebook.com/Michzit',
+          'https://www.instagram.com/fernandopadang',
+          'https://www.linkedin.com/in/fernandopadang',
+        ]}
+      />
+    );
+  };
+
   return(
     <div>
       <NextSeo
@@ -40,6 +56,7 @@ const SeoPage = (props: {type?: string}) => {
         }}
       />
       {props.type !== "LANDING" && <BreadcrumbJsonLd itemListElements={breadcrumbs}/>}
+      {props.type === "LANDING" && <ProfileJsonLd />}
       <h1>{title}</h1>
       <span>{description}</span>
       {props.type === "LANDING" && <img src="https://i.ibb.co/Jp8Cpj9/output-onlinepngtools.png" alt="Michael Fernando Padang" width="20%" />}

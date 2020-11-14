@@ -5,7 +5,7 @@ function jsonLdWebsite (){
   {
     "@context": "http://schema.org",
     "@type": "WebSite",
-    "name": "Fernando Padang",
+    "name": "Michael Fernando Padang",
     "url": "https://fernandopadang.tech",
     "sameAs": [
       "https://id-id.facebook.com/Michzit",

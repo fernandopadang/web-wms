@@ -64,16 +64,6 @@ const LandingPage = (props: DefaultProps) => {
   return (
     <div>
       <NextSeo title="Michael Fernando Padang - Landing Page" description={landingDescription} />
-      <SocialProfileJsonLd
-        type="Person"
-        name="Michael Fernando Padang"
-        url="http://www.fernandopadang.tech/landing"
-        sameAs={[
-          'https://id-id.facebook.com/Michzit',
-          'https://www.instagram.com/fernandopadang',
-          'https://www.linkedin.com/in/fernandopadang',
-        ]}
-      />
       {children}
     </div>
   );
