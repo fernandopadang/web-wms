@@ -1,4 +1,5 @@
 import MobileDetect from 'mobile-detect';
+import { DefaultSeo } from 'next-seo';
 import 'antd/dist/antd.less';
 
 interface PropsMyApp {
@@ -11,9 +12,23 @@ interface PropsInitial {
   ctx: any;
 }
 
+const Seo = () => {
+  return(
+    <DefaultSeo
+      title="Michael Fernando Padang"
+      openGraph={{
+        type: 'website',
+        locale: 'id_ID',
+        url: 'https://www.fernandopadang.tech/',
+        site_name: 'fernandopadang',
+      }}
+    />
+  );
+} ;
+
 const MyApp = (props: PropsMyApp) => {
   const { Component, pageProps, router} = props;
-  return <Component {...pageProps} />;
+  return <><Seo /><Component {...pageProps} /></>;
 };
 
 MyApp.getInitialProps = async (props: PropsInitial) => {

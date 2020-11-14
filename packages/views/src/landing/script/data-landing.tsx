@@ -121,7 +121,7 @@ export const ContentDataSource = {
       {
         name: 'content',
         className: 'title-content content-title-content',
-        children: '在这里用一段话介绍服务的案例情况',
+        children: '-------',
       },
     ],
   },

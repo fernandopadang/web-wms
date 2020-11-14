@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Row, Col } from 'antd';
 import { TweenOneGroup } from 'rc-tween-one';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import { getChildrenToRender } from '../script/utils';
+import { getChildrenToRender } from '../script/children-render';
 
 interface DefaultProps{
   dataSource: {

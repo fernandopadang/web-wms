@@ -39,7 +39,7 @@ const SeoPage = (props: {type?: string}) => {
           ],
         }}
       />
-      <BreadcrumbJsonLd itemListElements={breadcrumbs}/>
+      {props.type !== "LANDING" && <BreadcrumbJsonLd itemListElements={breadcrumbs}/>}
       <h1>{title}</h1>
       <span>{description}</span>
       {props.type === "LANDING" && <img src="https://i.ibb.co/Jp8Cpj9/output-onlinepngtools.png" alt="Michael Fernando Padang" width="20%" />}
