@@ -38,6 +38,7 @@
     "rc-tween-one": "^2.7.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "sitemap": "^6.3.3",
     "tslint-react-a11y": "^1.1.0"
   },
   "devDependencies": {
