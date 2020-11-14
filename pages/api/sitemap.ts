@@ -8,6 +8,9 @@ export default async (req: any, res: any) => {
     // List of sitemap
     const pages: any[] = [
       {
+        slug: '/'
+      },
+      {
         slug: '/landing'
       },
       {
