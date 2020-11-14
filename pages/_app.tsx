@@ -24,7 +24,7 @@ const Seo = () => {
       }}
     />
   );
-} ;
+};
 
 const MyApp = (props: PropsMyApp) => {
   const { Component, pageProps, router} = props;
