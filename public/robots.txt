@@ -2,4 +2,3 @@
 Sitemap: https://www.fernandopadang.tech/api/sitemap
 User-agent: *
 Allow: /*
-Disallow: /api/*
