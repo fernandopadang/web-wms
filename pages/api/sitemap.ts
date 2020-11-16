@@ -9,12 +9,6 @@ export default async (req: any, res: any) => {
     const pages: any[] = [
       {
         slug: '/'
-      },
-      {
-        slug: '/landing'
-      },
-      {
-        slug: '/login'
       }
     ];
 
@@ -40,7 +34,7 @@ export default async (req: any, res: any) => {
 
     // Display output to user
     res.end(sitemapOutput);
-  } catch(e: any) {
+  } catch (e: any) {
     res.send(JSON.stringify(e));
   }
 };
