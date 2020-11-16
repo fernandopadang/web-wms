@@ -1,5 +1,5 @@
 
-Sitemap: https://fernandopadang.tech/api/sitemap
+Sitemap: https://www.fernandopadang.tech/api/sitemap
 User-agent: *
 Allow: /*
 Disallow: /api/*

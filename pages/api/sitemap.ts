@@ -9,6 +9,9 @@ export default async (req: any, res: any) => {
     const pages: any[] = [
       {
         slug: '/'
+      },
+      {
+        slug: '/login'
       }
     ];
 
