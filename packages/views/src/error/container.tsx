@@ -11,7 +11,7 @@ export default function Container() {
         status="404"
         title="404"
         subTitle="Sorry, the page you visited does not exist."
-        extra={<Button onClick={() => Router.push("/landing")} type="primary">Back Home</Button>} />
+        extra={<Button onClick={() => Router.push("/")} type="primary">Back Home</Button>} />
     </React.Fragment>
   );
 }
