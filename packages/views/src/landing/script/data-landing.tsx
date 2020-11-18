@@ -253,7 +253,7 @@ export const FeatureDataSourceBottom = {
           <span>
             <span>
               <p>
-                Buld user interfaces and prototypes from wireframe and designs,
+                Build user interfaces and prototypes from wireframe and designs,
                 code and deploy applications in a cross-platform, cross-browser
                 environtment, integration with API for binding data, and update
                 current websites to meet modern web standards
