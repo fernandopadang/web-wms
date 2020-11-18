@@ -4,7 +4,7 @@ import { Sanitize } from '@web-wms/helper';
 
 const SeoPage = (props: {type?: string}) => {
   const router = useRouter();
-  const domain = "https://dev-web-wms.vercel.app/";
+  const domain = "https://fernandopadang.tech";
   const pageTitle = router.asPath !== "/" ? "Web WMS - " + Sanitize(String(router.asPath)) : "Web WMS - Application that helps you control and manage operations in a warehouse";
   let description = pageTitle + " : Application that helps you control and manage operations in a warehouse";
 

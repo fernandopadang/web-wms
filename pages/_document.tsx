@@ -24,10 +24,24 @@ function jsonLdWebsite (){
   );
 }
 
+function jsonLdLogo (){
+  const logo = `
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.fernandopadang.tech",
+    "logo": "https://i.ibb.co/Jp8Cpj9/output-onlinepngtools.png"
+  }
+`;
+  return (
+    <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: logo }} />
+  );
+}
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, styles: (<>{jsonLdWebsite()}</>)};
+    return { ...initialProps, styles: (<>{jsonLdWebsite()}{jsonLdLogo()}</>)};
   }
 
   render() {
