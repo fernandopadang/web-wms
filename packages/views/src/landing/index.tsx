@@ -65,6 +65,8 @@ const LandingPage = (props: DefaultProps) => {
     <div>
       <NextSeo title="Michael Fernando Padang" description={`${landingDescription.substring(0, 250)}...`} />
       <h1 style={{display: "none"}}>Michael Fernando Padang</h1>
+      <h2 style={{display: "none"}}>{landingDescription}</h2>
+      <h3 style={{display: "none"}}>Frontend Framework : Next, React, Vue, Angular. Typescript</h3>
       {children}
     </div>
   );
