@@ -63,7 +63,8 @@ const LandingPage = (props: DefaultProps) => {
   ];
   return (
     <div>
-      <NextSeo title="Michael Fernando Padang - Landing Page" description={landingDescription} />
+      <NextSeo title="Michael Fernando Padang - Landing Page" description={`${landingDescription.substring(0, 250)}...`} />
+      <h1 style={{display: "none"}}>Michael Fernando Padang</h1>
       {children}
     </div>
   );
