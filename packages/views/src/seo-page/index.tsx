@@ -9,7 +9,7 @@ const SeoPage = (props: {type?: string}) => {
   let description = pageTitle + " : Application that helps you control and manage operations in a warehouse";
 
   const title =  props.type === "LANDING" ? "Michael Fernando Padang" : pageTitle ;
-  const landingDescription = "Hello! My name is Michael Fernando Padang. A career in Information Technology, specifically in the areas of application development and IT consulting that will optimally utilize strong planning skills, analytical skills as well as JavaScript, Typescript, PHP programming skills, SQL database skill, and Business Process Analysis in order to work individually or teamwork, leadership skills, time-management and communications skills.";
+  const landingDescription = "Michael Fernando Padang - Hello! My name is Michael Fernando Padang. A career in Information Technology, specifically in the areas of application development and IT consulting that will optimally utilize strong planning skills, analytical skills as well as JavaScript, Typescript, PHP programming skills, SQL database skill, and Business Process Analysis in order to work individually or teamwork, leadership skills, time-management and communications skills.";
   let breadcrumbs;
   let mainImage;
   mainImage = props.type === "LANDING" ? "https://i.ibb.co/Jp8Cpj9/output-onlinepngtools.png" : "https://i.ibb.co/5rdvW9F/iconfinder-technologymachineelectronicdevice24-4026436-113326.png";
