@@ -12,8 +12,8 @@ export const NavDataSource = {
     children: [
       {
         name: 'linkNav',
-        to: '/login',
-        children: 'Dashboard App',
+        to: 'https://vue.fernandopadang.tech',
+        children: 'Vue App',
         className: 'menu-item nav-linkmenu-dashboard',
       },
       {

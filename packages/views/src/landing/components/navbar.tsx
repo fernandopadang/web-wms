@@ -49,7 +49,7 @@ const SectionNav = (props: DefaultProps) => {
     }
     return React.createElement(
       tag,
-      { ...item, ...tagProps, key: i.toString(), onClick: () => redirect("/login") },
+      { ...item, ...tagProps, key: i.toString(), onClick: () => redirect(tagProps.href) },
       navData[key].children
     );
   });
